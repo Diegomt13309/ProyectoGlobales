@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LESCOnario.Views.WelcomePage"
+             BackgroundImageSource="back_image.png"
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+
+    <StackLayout>
+        <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
+            <Label Text="Bienvenido a LESCO para todos!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
+        </Frame>
+        <Grid VerticalOptions="EndAndExpand" BackgroundColor="#990000" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" >
+                <Button Text="Iniciar Sesion" HorizontalOptions="CenterAndExpand" WidthRequest="100" 
+                        TextColor="White" BackgroundColor="#c70404" Clicked="login_page" BorderColor="White" 
+                        BorderWidth="2" CornerRadius="20"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Button Text="Resgistro App" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                        TextColor="White" BackgroundColor="#c70404" Clicked="signup_page" BorderColor="White" 
+                        BorderWidth="2" CornerRadius="20"></Button>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
