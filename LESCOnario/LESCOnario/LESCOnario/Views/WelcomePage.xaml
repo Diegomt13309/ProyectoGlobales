@@ -7,7 +7,10 @@
              Shell.FlyoutItemIsVisible="False"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
-             Shell.FlyoutBehavior="Disabled">
+             Shell.FlyoutBehavior="Disabled"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             >
 
     <StackLayout>
         <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">

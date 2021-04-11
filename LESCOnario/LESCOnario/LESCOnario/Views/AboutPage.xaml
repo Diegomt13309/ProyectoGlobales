@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LESCOnario.Views.AboutPage"
              xmlns:vm="clr-namespace:LESCOnario.ViewModels"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             >
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />

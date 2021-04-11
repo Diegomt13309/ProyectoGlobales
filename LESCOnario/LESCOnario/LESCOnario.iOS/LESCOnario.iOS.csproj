@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -141,7 +142,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\LESCOnario\LESCOnario.csproj">
-      <Project>{2AA27452-4794-443D-A952-5E30C766CF85}</Project>
+      <Project>{8FA4F344-1CAE-48E5-A1D9-3CF18C6B5828}</Project>
       <Name>LESCOnario</Name>
     </ProjectReference>
   </ItemGroup>
