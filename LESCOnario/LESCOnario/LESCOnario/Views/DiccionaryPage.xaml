@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Diccionario"
+             x:Class="LESCOnario.Views.DiccionaryPage"
+             BackgroundColor="DarkRed">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"
+                 IconImageSource="logout.png"
+                 Order="Secondary"
+                 Priority="0"
+                 Command="{Binding LogOutCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <CollectionView ItemsSource="{Binding Cards}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="10" CornerRadius="20" IsClippedToBounds="false" BorderColor="Red">
+                    <Grid HeightRequest="420"  RowSpacing="20">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".5*" />
+                            <RowDefinition Height=".5*" />
+                            <RowDefinition Height=".5*" />
+                            <RowDefinition Height=".5*" />
+                        </Grid.RowDefinitions>
+                        <Image Aspect="AspectFit" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Source="{Binding Image}"/>
+                        <Label Grid.Row="0" HorizontalTextAlignment="Start" TextColor="DarkRed" FontSize="{OnPlatform iOS=20, Android=75}" Text="{Binding Letter}"></Label>
+                        <Label Grid.Row="3" HorizontalTextAlignment="End" TextColor="DarkRed" FontSize="{OnPlatform iOS=20, Android=75}" Text="{Binding Letter}"></Label>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+  
+    </CollectionView>
+    
+</ContentPage>
