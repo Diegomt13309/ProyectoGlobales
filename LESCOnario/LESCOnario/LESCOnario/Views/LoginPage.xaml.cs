@@ -20,14 +20,15 @@ namespace LESCOnario.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var user = new User();
+            /*var user = new User();
             
             user = await App.Database.GetNoteAsync(EntryUserEmail.Text, EntryUserPassword.Text);
 
             if (user!=null) {
                 await Shell.Current.GoToAsync("//yes");
-            }
-            
+            }*/
+            await Navigation.PushAsync(new AboutUsPages());
+
         }
     }
 }
