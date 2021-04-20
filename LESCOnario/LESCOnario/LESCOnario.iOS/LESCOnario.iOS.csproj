@@ -149,4 +149,97 @@
   <ItemGroup>
     <BundleResource Include="Resources\back_image.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\j.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logout.png" />
+  </ItemGroup>
 </Project>
