@@ -11,5 +11,10 @@ namespace LESCOnario.Views
         {
             InitializeComponent();
         }
+
+        private async void history_button(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LescoHistoryPage());
+        }
     }
 }

@@ -6,11 +6,15 @@
       xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-        <ScrollView>
-             <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
-            <Label Text="Acerca de LESCONARIO" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
-        </Frame>
-
-        </ScrollView>
+        <RelativeLayout>
+            <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
+                <Label Text="Acerca de LESCONARIO" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
+            </Frame>
+           <Frame>
+            <Button Text="Iniciar Session" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
+                                BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                Clicked="history_button"></Button>
+               </Frame>
+</RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
