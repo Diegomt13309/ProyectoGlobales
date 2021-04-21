@@ -9,6 +9,9 @@
              Shell.TabBarIsVisible="False"
              Shell.FlyoutBehavior="Disabled">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
             <Label Text="Bienvenido a LESCO para todos!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>

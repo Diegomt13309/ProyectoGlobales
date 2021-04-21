@@ -14,12 +14,12 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="Red" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#990000" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -29,10 +29,12 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-
     <ShellItem Route="main">
         <ShellContent ContentTemplate="{DataTemplate local:WelcomePage}"/>
     </ShellItem>
+
+
+    
 
     <TabBar Route="yes">
         <Tab Title="Browse12" Icon="tab_feed.png">
@@ -42,6 +44,10 @@
         <Tab Title="About12" Icon="tab_about.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+        <Tab Title="ABC" Icon="diccionario.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:DiccionaryPage}" />
         </Tab>
     </TabBar>
 
