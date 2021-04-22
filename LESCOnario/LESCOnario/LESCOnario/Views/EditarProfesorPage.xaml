@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:LESCOnario.ViewModels"
+             Title="Editar"
+             x:Class="LESCOnario.Views.EditarProfesorPage"
+             BackgroundColor="DarkRed">
+
+    <ContentPage.BindingContext>
+        <local:EditarListViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Editar Profesor" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="36" FontFamily="Italic"/>
+                <Grid Margin="30,0,30,0" VerticalOptions="CenterAndExpand" BackgroundColor="Red">
+                    <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand" BackgroundColor="Lavender">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0">
+                            <Entry Placeholder="Nombre" FontSize="20" x:Name="EntryName"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1">
+                            <Entry Placeholder="Apellidos" FontSize="20" x:Name="EntryAp"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2">
+                            <Entry Placeholder="Id" Keyboard="Numeric" FontSize="20" x:Name="EntryId"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3">
+                            <Entry Placeholder="Email" FontSize="20" x:Name="EntryEmail"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4">
+                            <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryPassword"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="5">
+                            <Entry Placeholder="Telefono" Keyboard="Numeric" FontSize="20" x:Name="EntryPhone"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="6">
+                            <ListView ItemsSource="{Binding Products}"
+                                      HasUnevenRows="True"
+                                      ItemTapped="ListView_OnItemTapped"
+                                      Margin="0,5">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Padding="20">
+                                                <Label Text="{Binding nombre}"
+                                                    TextColor="Black"
+                                                    FontSize="15"/>
+                                                <StackLayout IsVisible="{Binding IsVisible}"
+                                                    Orientation="Horizontal"
+                                                    Margin="0,5,0,0">
+                                                    <Button Text="Eliminar"
+                                                        BackgroundColor="Red"
+                                                        TextColor="White"
+                                                        WidthRequest="100"
+                                                        FontSize="11"
+                                                        />
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <StackLayout Grid.Row="7">
+                            <Button Text="Actualizar" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
+                                BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                Clicked="Button_ClickedAsync"></Button>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

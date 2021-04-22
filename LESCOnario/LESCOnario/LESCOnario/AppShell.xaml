@@ -49,6 +49,14 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:DiccionaryPage}" />
         </Tab>
+        <Tab Title="Profesores">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:ProfesorPage}" />
+        </Tab>
+        <Tab Title="Lista Profes">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:ListProfesores}" />
+        </Tab>
     </TabBar>
 
     <!--
