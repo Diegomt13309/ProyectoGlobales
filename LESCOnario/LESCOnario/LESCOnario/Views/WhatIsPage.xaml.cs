@@ -5,16 +5,15 @@ using Xamarin.Forms;
 
 namespace LESCOnario.Views
 {
-    public partial class LescoHistoryPage 
+    public partial class WhatIsPage
     {
-        public LescoHistoryPage()
+        public WhatIsPage()
         {
             InitializeComponent();
         }
-
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            
+
         }
     }
 }

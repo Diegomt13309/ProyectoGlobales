@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition  Width="*" />
         </Grid.ColumnDefinitions>
-        <Button BackgroundColor="#750000" Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?"  TextColor="White" />
+        <Button BackgroundColor="#750000" Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White" />
         <Button BackgroundColor="#4A0000" Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" />
         <Button BackgroundColor="#290000" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" />
         <Button BackgroundColor="#B81414" Grid.Row="1" Grid.Column="1" Text="OTHER" TextColor="White" />

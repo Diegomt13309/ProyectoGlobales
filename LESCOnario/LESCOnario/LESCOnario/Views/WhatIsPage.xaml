@@ -1,0 +1,18 @@
+﻿
+<popup:PopupPage
+  x:Class="LESCOnario.Views.WhatIsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   >
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10" Margin="10">
+<Frame  Padding="15">
+      <StackLayout> 
+           <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" Text ="¿Qué es LESCOnario" />
+             <Label FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Center" Text ="Es una aplicación desarrollada para facilitar una primera incursión en el lenguaje de LESCO(Lengua de señas Costarricense) desarrollada por estudiantes de la Universidad Nacional " />
+          
+          <Button Text="Ok" BackgroundColor="#990000" HeightRequest="35" TextColor="White" Clicked="Button_Clicked"></Button>
+      </StackLayout>
+    </Frame> 
+  </StackLayout>
+</popup:PopupPage>
