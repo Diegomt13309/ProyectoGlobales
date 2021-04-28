@@ -11,6 +11,7 @@
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
+
     
     <ContentPage.Resources>
         <ResourceDictionary>

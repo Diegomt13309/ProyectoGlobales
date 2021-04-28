@@ -8,6 +8,21 @@
     
     >
 
+      <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"
+                 IconImageSource="logout.png"
+                 Order="Secondary"
+                 Priority="0"
+                 Command="{Binding LogOutCommand}"/>
+        
+        <ToolbarItem Text="About us"
+                 IconImageSource="logout.png"
+                 Order="Secondary"
+                 Priority="0"
+                 Clicked="about_us_button"
+                 />
+    </ContentPage.ToolbarItems>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
