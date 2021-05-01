@@ -14,6 +14,7 @@ namespace LESCOnario
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(DiccionaryPage), typeof(DiccionaryPage));
+            Routing.RegisterRoute(nameof(VideoPage), typeof(VideoPage));
         }
 
     }

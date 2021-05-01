@@ -31,10 +31,7 @@
 
     <ShellItem Route="main">
         <ShellContent ContentTemplate="{DataTemplate local:WelcomePage}"/>
-    </ShellItem>
-
-
-    
+    </ShellItem>   
 
     <TabBar Route="yes">
         <Tab Title="Browse12" Icon="tab_feed.png">
@@ -44,6 +41,9 @@
         <Tab Title="About12" Icon="tab_about.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+        <Tab Title="Videos">
+            <ShellContent ContentTemplate="{DataTemplate local:VideoPage}"/>
         </Tab>
         <Tab Title="ABC" Icon="diccionario.png">
             <ShellContent 
