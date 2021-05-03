@@ -3,11 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LESCOnario.Views.VideoPage">
 
-    <Grid BackgroundColor="Black">
+    <Grid Margin="20,40,20,20" Padding="30,30,30,30" BackgroundColor="Black"
+          RowSpacing="5" ColumnSpacing="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>        
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="0">
+            <CarouselView ItemsSource="{Binding Videos}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame HasShadow="True" BorderColor="DarkGray"
+                                   CornerRadius="5" Margin="20" HeightRequest="300"
+                                   HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Label Text="Miss nuts" FontAttributes="Bold" FontSize="Large"
+                                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="White">                                        
+                                    </Label>
+                                </StackLayout>                                
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+                
+            </CarouselView>
+        </StackLayout>
+        <Button Grid.Row="7" Grid.Column="1" Text="Reproducir" CornerRadius="15" FontSize="Micro" FontAttributes="Bold"/>
+        <Button Grid.Row="8" Grid.Column="0" Text="Anterior" CornerRadius="15" FontSize="Micro" FontAttributes="Bold"/>
+        <Button Grid.Row="8" Grid.Column="2" Text="Siguiente" CornerRadius="15" FontSize="Micro" FontAttributes="Bold"/>
+        
     </Grid>
-</ContentPage>
+</ContentPage> 
