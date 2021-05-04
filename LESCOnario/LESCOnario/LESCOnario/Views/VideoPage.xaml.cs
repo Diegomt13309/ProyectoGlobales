@@ -30,7 +30,7 @@ namespace LESCOnario.Views
 
         private readonly HttpClient httpClient = new HttpClient();
 
-        public ObservableCollection<Video> Videos { get; set; } = new ObservableCollection<Video>();
+        public ObservableCollection<DefaultVideo> Videos { get; set; } = new ObservableCollection<DefaultVideo>();
         public VideoPage()
         {
             InitializeComponent();
@@ -40,22 +40,17 @@ namespace LESCOnario.Views
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
             var httpClient = new HttpClient();
-
             var videoJson = await httpClient.GetStringAsync(videoUrlMultiVideo);
-
-
             Videos.Clear();
-
             Video x = JsonConvert.DeserializeObject<Video>(videoJson);
-
-            var p = x.etag;
-               
-
-          
-
- 
+            Thumbnail myVideos = new Thumbnail();
+            foreach(var v in x.item)
+            {
+                myVideos = v.snippets.thumbnails;
+                if(myVideos.standard.url!=null)
+                    Videos.Add(myVideos.standard);
+            }
         }
     }
 }
