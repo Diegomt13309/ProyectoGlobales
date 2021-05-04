@@ -18,8 +18,6 @@ namespace LESCOnario.Models
 
         [JsonProperty("url")]
         public Uri url { get; set; }
-
-
     }
 
 }
