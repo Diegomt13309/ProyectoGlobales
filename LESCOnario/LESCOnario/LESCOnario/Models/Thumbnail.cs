@@ -8,8 +8,19 @@ namespace LESCOnario.Models
     {
 
         [JsonProperty("default")]
-        public DefaultVideo[] _default {get;set;}
+        public DefaultVideo _default {get;set;}
 
+        [JsonProperty("medium")]
+        public DefaultVideo medium { get; set; }
+
+        [JsonProperty("high")]
+        public DefaultVideo high { get; set; }
+
+        [JsonProperty("standard")]
+        public DefaultVideo standard { get; set; }
+
+        [JsonProperty("maxres")]
+        public DefaultVideo maxres { get; set; }
     }
     
 

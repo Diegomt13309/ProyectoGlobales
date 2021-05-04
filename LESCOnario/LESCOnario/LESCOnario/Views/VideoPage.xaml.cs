@@ -46,18 +46,14 @@ namespace LESCOnario.Views
             var videoJson = await httpClient.GetStringAsync(videoUrlMultiVideo);
 
 
-
-            try
-            {
-                Video x = JsonConvert.DeserializeObject<Video>(videoJson);
-               
-            }
-            catch (Exception exception)
-            {
-                exception.Message.ToString();
-            }
-
             Videos.Clear();
+
+            Video x = JsonConvert.DeserializeObject<Video>(videoJson);
+
+            var p = x.etag;
+               
+
+          
 
  
         }

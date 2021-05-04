@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:LESCOnario.ViewModels" x:DataType="viewmodels:VideoViewModel"
              x:Class="LESCOnario.Views.VideoPage">
 
     <Grid Margin="20,40,20,20" Padding="30,30,30,30" BackgroundColor="Black"
@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <StackLayout Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="0">
-            <CarouselView ItemsSource="{Binding videos}">
+            <CarouselView ItemsSource="{Binding Videos}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
@@ -34,7 +34,7 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
                                     <Image Source="{Binding url}" Aspect="AspectFill" HeightRequest="150"
                                            WidthRequest="150" HorizontalOptions="Center"/>
-                                    <Label Text="{Binding etag}" />
+                                    <Label Text="{Binding etag}" TextColor="White" />
                                 </StackLayout>                                
                             </Frame>
                         </StackLayout>
