@@ -18,7 +18,7 @@ namespace LESCOnario.Views
     {
         private const string ApiKey = "AIzaSyBZ7f5dkD2eLeByza7kSVEwuVdxgREiQJc";
         private const string videoUrlMultiVideo = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id="
-            + "s9sXsDKqPoo,6O6hjVRFR4o,Ta4T7mlzP4M"
+            + "W14Ed-y7JvM,XPyeIOqI6qY,HHmfaLGfx-E,g_sn520GhJA,d5WpSHr0G9k,1r_ugCtCgnM"
             + "&key="
             + ApiKey;
         private const string videoUrlPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=20&playlistId="
@@ -46,13 +46,11 @@ namespace LESCOnario.Views
             Thumbnail myVideos = new Thumbnail();
             foreach(var v in x.item)
             {
-                myVideos = v.snippets.thumbnails;
-                if (myVideos.standard.height != null)
-                {
-                    v.snippets.url = v.snippets.thumbnails.high.url;
-                    v.snippets.id = v.id;
-                    lescoVideos.Add(v.snippets);
-                }
+                myVideos = v.snippets.thumbnails;               
+                v.snippets.url = v.snippets.thumbnails.high.url;
+                v.snippets.id = v.id;
+                lescoVideos.Add(v.snippets);
+                
             }
         }
 
