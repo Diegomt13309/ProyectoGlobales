@@ -4,7 +4,7 @@
              x:Class="LESCOnario.Views.VideoPage">
 
     <StackLayout BackgroundColor="White">
-        <CarouselView ItemsSource="{Binding lescoVideos}" BackgroundColor="White" Loop="False">
+        <CarouselView ItemsSource="{Binding lescoVideos}" BackgroundColor="White" Loop="False" CurrentItemChanged="CarouselView_CurrentItemChanged">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="White" >
@@ -18,10 +18,8 @@
                                            WidthRequest="150" HorizontalOptions="Center"/>
                                 <Label Text="{Binding description}" TextColor="Black" />
                             </StackLayout>
-                        </Frame>
-                        
-                    </StackLayout>
-                    
+                        </Frame>                        
+                    </StackLayout>                    
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

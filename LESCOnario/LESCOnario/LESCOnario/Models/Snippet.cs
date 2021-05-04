@@ -10,6 +10,8 @@ namespace LESCOnario.Models
         public string publishedAT { get; set; }
         public Uri url { get; set; }
 
+        public string id { get; set; }
+
         [JsonProperty("channelId")]
         public string channelId { get; set; }
 

@@ -8,7 +8,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,6 +27,7 @@ namespace LESCOnario.Views
             + ApiKey;
 
         private readonly HttpClient httpClient = new HttpClient();
+        private Snippet _currentItem;
 
         public ObservableCollection<Snippet> lescoVideos { get; set; } = new ObservableCollection<Snippet>();
         public VideoPage()
@@ -48,14 +48,23 @@ namespace LESCOnario.Views
             {
                 myVideos = v.snippets.thumbnails;
                 if (myVideos.standard.height != null)
+                {
                     v.snippets.url = v.snippets.thumbnails.high.url;
+                    v.snippets.id = v.id;
                     lescoVideos.Add(v.snippets);
+                }
             }
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("vnd.youtube://www.youtube.com/"));
+            Device.OpenUri(new Uri("vnd.youtube://www.youtube.com/watch?v=" + _currentItem.id));
+        }
+
+        private void CarouselView_CurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
+        {
+            Snippet previousItem = e.PreviousItem as Snippet;
+            _currentItem = e.CurrentItem as Snippet;
         }
     }
 }
