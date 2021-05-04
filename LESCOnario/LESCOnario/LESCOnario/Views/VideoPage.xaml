@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <StackLayout Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="0">
-            <CarouselView ItemsSource="{Binding Videos}">
+            <CarouselView ItemsSource="{Binding videos}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
@@ -30,9 +30,11 @@
                                    CornerRadius="5" Margin="20" HeightRequest="300"
                                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                                 <StackLayout>
-                                    <Label Text="Miss nuts" FontAttributes="Bold" FontSize="Large"
-                                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="White">                                        
-                                    </Label>
+                                    <Label Text="{Binding kind}" FontAttributes="Bold" FontSize="Large"
+                                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                                    <Image Source="{Binding url}" Aspect="AspectFill" HeightRequest="150"
+                                           WidthRequest="150" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding etag}" />
                                 </StackLayout>                                
                             </Frame>
                         </StackLayout>

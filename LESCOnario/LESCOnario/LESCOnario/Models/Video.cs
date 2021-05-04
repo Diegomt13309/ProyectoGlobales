@@ -7,17 +7,11 @@ namespace LESCOnario.Models
 {
     public class Video
     {
+        public string kind { get; set; }
+        public string etag { get; set; }
 
-        [JsonProperty("id")]
-        public string id { get; set; }
-
-        [JsonProperty("snippet")]
-        public string snippet { get; set; }
-
+        [JsonProperty("items")]
         public IList<YoutubeItem> item { get; set; }
-
-        [JsonProperty("url")]
-        public Uri url { get; set; }
     }
 
 }
