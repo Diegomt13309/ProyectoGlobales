@@ -18,7 +18,6 @@ namespace LESCOnario.Views
     public partial class VideoPage : ContentPage
     {
         private const string ApiKey = "AIzaSyBZ7f5dkD2eLeByza7kSVEwuVdxgREiQJc";
-        private const string videoUrl = "https://montemagno.com/monkeys.json";
         private const string videoUrlMultiVideo = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id="
             + "s9sXsDKqPoo,6O6hjVRFR4o,Ta4T7mlzP4M"
             + "&key="
@@ -30,7 +29,7 @@ namespace LESCOnario.Views
 
         private readonly HttpClient httpClient = new HttpClient();
 
-        public ObservableCollection<DefaultVideo> Videos { get; set; } = new ObservableCollection<DefaultVideo>();
+        public ObservableCollection<Snippet> lescoVideos { get; set; } = new ObservableCollection<Snippet>();
         public VideoPage()
         {
             InitializeComponent();
@@ -42,15 +41,21 @@ namespace LESCOnario.Views
             base.OnAppearing();
             var httpClient = new HttpClient();
             var videoJson = await httpClient.GetStringAsync(videoUrlMultiVideo);
-            Videos.Clear();
+            lescoVideos.Clear();
             Video x = JsonConvert.DeserializeObject<Video>(videoJson);
             Thumbnail myVideos = new Thumbnail();
             foreach(var v in x.item)
             {
                 myVideos = v.snippets.thumbnails;
-                if(myVideos.standard.url!=null)
-                    Videos.Add(myVideos.standard);
+                if (myVideos.standard.height != null)
+                    v.snippets.url = v.snippets.thumbnails.high.url;
+                    lescoVideos.Add(v.snippets);
             }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("vnd.youtube://www.youtube.com/"));
         }
     }
 }

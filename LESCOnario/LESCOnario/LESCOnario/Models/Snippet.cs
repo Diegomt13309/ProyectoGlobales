@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace LESCOnario.Models
@@ -7,6 +8,7 @@ namespace LESCOnario.Models
     {
         [JsonProperty("publishedAT")]
         public string publishedAT { get; set; }
+        public Uri url { get; set; }
 
         [JsonProperty("channelId")]
         public string channelId { get; set; }
