@@ -6,10 +6,10 @@ namespace LESCOnario.Models
     {
 
         [JsonProperty("title")]
-        string title { get; set; }
+        public string title { get; set; }
 
         [JsonProperty("description")]
-        string description { get; set; }
+        public string description { get; set; }
 
     }
 }

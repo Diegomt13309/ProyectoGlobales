@@ -1,5 +1,6 @@
 ﻿using LESCOnario.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -40,16 +41,25 @@ namespace LESCOnario.Views
         {
             base.OnAppearing();
 
+            var httpClient = new HttpClient();
+
             var videoJson = await httpClient.GetStringAsync(videoUrlMultiVideo);
 
-            var videos = JsonConvert.DeserializeObject<Video[]>(videoJson);
+
+
+            try
+            {
+                Video x = JsonConvert.DeserializeObject<Video>(videoJson);
+               
+            }
+            catch (Exception exception)
+            {
+                exception.Message.ToString();
+            }
 
             Videos.Clear();
 
-            foreach (var video in videos)
-            {
-                Videos.Add(video);
-            }
+ 
         }
     }
 }

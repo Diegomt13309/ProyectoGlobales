@@ -6,34 +6,34 @@ namespace LESCOnario.Models
     public class Snippet
     {
         [JsonProperty("publishedAT")]
-        string publishedAT { get; set; }
+        public string publishedAT { get; set; }
 
         [JsonProperty("channelId")]
-        string channelId { get; set; }
+        public string channelId { get; set; }
 
         [JsonProperty("title")]
-        string title { get; set; }
+        public string title { get; set; }
 
         [JsonProperty("description")]
-        string description { get; set; }
+        public string description { get; set; }
 
         [JsonProperty("thumbnails")]
-        IList<Thumbnail> thumbnails { get; set; }
+        public Thumbnail thumbnails { get; set; }
 
         [JsonProperty("channelTitle")]
-        string channelTitle { get; set; }
+        public string channelTitle { get; set; }
 
         [JsonProperty("tags")]
-        IList<string> tags { get; set; }
+        public IList<string> tags { get; set; }
 
         [JsonProperty("categoryId")]
-        string categoryId { get; set; }
+        public string categoryId { get; set; }
 
         [JsonProperty("localized")]
-        Localized localized { get; set; }
+        public Localized localized { get; set; }
 
         [JsonProperty("statistics")]
-        Statistics statistics { get; set; }
+        public Statistics statistics { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace LESCOnario.Models
@@ -7,6 +8,9 @@ namespace LESCOnario.Models
     {
 
         [JsonProperty("default")]
-        IList<string> _default {get;set;}
+        public DefaultVideo[] _default {get;set;}
+
     }
+    
+
 }

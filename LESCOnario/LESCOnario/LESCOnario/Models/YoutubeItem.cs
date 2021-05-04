@@ -8,18 +8,15 @@ namespace LESCOnario.Models
     public class YoutubeItem
     {
         [JsonProperty("kind")]
-        string kind { get; set; }
+        public string kind { get; set; }
 
         [JsonProperty("etag")]
-        string etag { get; set; }
+        public string etag { get; set; }
 
         [JsonProperty("id")]
-        string id { get; set; }
+        public string id { get; set; }
 
-        [JsonProperty("snippets")]
-        IList<Snippet> snippets { get; set; }
-
-
-
+        [JsonProperty("snippet")]
+        public Snippet snippets { get; set; }
     }
 }
