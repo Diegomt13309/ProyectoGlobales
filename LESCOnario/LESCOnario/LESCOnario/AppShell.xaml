@@ -45,6 +45,9 @@
         <Tab Title="Videos">
             <ShellContent ContentTemplate="{DataTemplate local:VideoPage}"/>
         </Tab>
+        <Tab Title="Perfil">
+            <ShellContent ContentTemplate="{DataTemplate local:PerfilPage}"/>
+        </Tab>
         <Tab Title="ABC" Icon="diccionario.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:DiccionaryPage}" />
