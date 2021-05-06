@@ -13,8 +13,6 @@ namespace LESCOnario
     {
 
         static DataBaseStoreUser database;
-        static DataBaseStoreProfesor databaseP;
-        static DataBaseStoreCurso databaseC;
 
         public static DataBaseStoreUser Database
         {
@@ -27,34 +25,12 @@ namespace LESCOnario
                 return database;
             }
         }
-        public static DataBaseStoreProfesor DatabaseP
-        {
-            get
-            {
-                if (databaseP == null)
-                {
-                    databaseP = new DataBaseStoreProfesor(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Profesor.db3"));
-                }
-                return databaseP;
-            }
-        }
-        public static DataBaseStoreCurso DatabaseC
-        {
-            get
-            {
-                if (databaseC == null)
-                {
-                    databaseC = new DataBaseStoreCurso(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "CursoxProfe.db3"));
-                }
-                return databaseC;
-            }
-        }
+        
         public App()
         {
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            ListProfesoresViewModel aux = new ListProfesoresViewModel();
             MainPage = new AppShell();
         }
 

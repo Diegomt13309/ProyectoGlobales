@@ -7,42 +7,100 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Label Text="Nuevo Profesor" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
-                <Grid Margin="30,0,30,0" VerticalOptions="CenterAndExpand" BackgroundColor="Red">
-                    <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand" BackgroundColor="Lavender">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <StackLayout Grid.Row="0">
-                            <Entry Placeholder="Nombre" FontSize="20" x:Name="EntryName"/>
+                <Label Text="Profesor" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
+                <ContentView x:Name="TLista" Padding="10,0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout VerticalOptions="Center" >
+                        <StackLayout Orientation="Vertical" HeightRequest="663" WidthRequest="300" >
+                            <Grid>
+                                <Image Source="lista.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill"/>
+                                <ScrollView>
+                                    <ListView ItemsSource="{Binding Cursos}"
+                                              HasUnevenRows="True"
+                                              ItemTapped="ListView_OnItemTapped"
+                                              Margin="0,5">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <StackLayout Padding="20">
+                                                        <Label Text="{Binding nombre}"
+                                                            TextColor="Black"
+                                                            FontSize="15"/>
+                                                        <StackLayout IsVisible="{Binding IsVisible}"
+                                                                Orientation="Horizontal"
+                                                                Margin="0,5,0,0">
+                                                            <Button Text="Eliminar" WidthRequest="120" TextColor="White" 
+                                                                BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                                                Clicked="Button_Clicked_1"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </ScrollView>
+                                <Button Text="Agregar" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="140" TextColor="White" 
+                                    BackgroundColor="Green" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                    Clicked="Button_Clicked"/>
+                                <Button Text="Cerrar" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="140" TextColor="White" 
+                                    BackgroundColor="Red" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                    Clicked="Button_Clicked_2"/>
+                            </Grid>
                         </StackLayout>
-                        <StackLayout Grid.Row="1">
-                            <Entry Placeholder="Apellidos" FontSize="20" x:Name="EntryAp"/>
+                    </StackLayout>
+                </ContentView>
+                <ContentView x:Name="TFormulario" Padding="10,0" IsVisible="true" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout VerticalOptions="Center" >
+                        <StackLayout Orientation="Vertical" HeightRequest="663" WidthRequest="300" >
+                            <Grid BackgroundColor="#750202" IsVisible="true">
+                                <Image Source="profesor.png" Aspect="Fill"/>
+                                <ScrollView>
+                                    <Grid Padding="20" RowSpacing="20">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <StackLayout Grid.Row="0">
+                                            <Label Text="Nombre:" Margin="2"/>
+                                            <Entry Text="{Binding product.nombre}" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="1">
+                                            <Label Text="Apellidos:" Margin="2"/>
+                                            <Entry Text="{Binding product.apellidos}" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="2">
+                                            <Label Text="Identificacion:" Margin="2"/>
+                                            <Entry Text="{Binding product.id}" Keyboard="Numeric" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="3">
+                                            <Label Text="Correo:" Margin="2"/>
+                                            <Entry Text="{Binding product.email}" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="4">
+                                            <Label Text="Contraseña:" Margin="2"/>
+                                            <Entry Text="{Binding product.password}" IsPassword="True" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="5">
+                                            <Label Text="Telefono:" Margin="2"/>
+                                            <Entry Text="{Binding product.telefono}" Keyboard="Numeric" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="6" Orientation="Horizontal">
+                                            <Button x:Name="btn" Text="{Binding btnSaveLavel}" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
+                                            BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+                                            Command="{Binding btnAgregarProfe}"/>
+                                            <Button x:Name="btnMostrar" Text="Mostrar Cursos" HorizontalOptions="CenterAndExpand" WidthRequest="160" TextColor="White" 
+                                            BackgroundColor="Blue" BorderColor="White" BorderWidth="2" CornerRadius="20" IsVisible="false" 
+                                            Clicked="btnMostrar_Clicked"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </ScrollView>
+                            </Grid>
                         </StackLayout>
-                        <StackLayout Grid.Row="2">
-                            <Entry Placeholder="Id" Keyboard="Numeric" FontSize="20" x:Name="EntryId"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="3">
-                            <Entry Placeholder="Email" FontSize="20" x:Name="EntryEmail"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="4">
-                            <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryPassword"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="5">
-                            <Entry Placeholder="Telefono" Keyboard="Numeric" FontSize="20" x:Name="EntryPhone"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="6">
-                            <Button Text="Agregar" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
-                                BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
-                                Clicked="Button_ClickedAsync"></Button>
-                        </StackLayout>
-                    </Grid>
-                </Grid>
+                    </StackLayout>
+                </ContentView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

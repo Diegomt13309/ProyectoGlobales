@@ -1,37 +1,39 @@
 ﻿using Lesconario.Models;
+using LESCOnario.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 
 namespace LESCOnario.ViewModels
 {
-    class ListProfesoresViewModel
+    public class ListCursoViewModel
     {
-        private Profesor _oldProduct;
+        private Curso _oldProduct;
 
-        public ObservableCollection<Profesor> Products { get; set; }
+        public ObservableCollection<Curso> Products { get; set; }
 
-        public ListProfesoresViewModel()
+        public ListCursoViewModel()
         {
-            List<Profesor> list = App.DatabaseP.getList();
-            Products = new ObservableCollection<Profesor> { };
+            List<Curso> list = new List<Curso>
+            {
+                new Curso{nombre = "Curso 1", IsVisible = false},
+                new Curso{nombre = "Curso 2", IsVisible = false},
+                new Curso{nombre = "Curso 3", IsVisible = false},
+                new Curso{nombre = "Curso 4", IsVisible = false}
+            };
+            Products = new ObservableCollection<Curso> { };
             for (int i = 0; i < list.Count; i++)
             {
-                Profesor p = new Profesor();
+                Curso p = new Curso();
                 p.nombre = list[i].nombre;
-                p.apellidos = list[i].apellidos;
-                p.email = list[i].email;
-                p.id = list[i].id;
                 p.IsVisible = list[i].IsVisible;
-                p.password = list[i].password;
-                p.telefono = list[i].telefono;
-                p.idU = list[i].idU;
                 Products.Add(p);
             }
         }
 
-        public void ShowOrHidePoducts(Profesor product)
+        public void ShowOrHidePoducts(Curso product)
         {
             if (_oldProduct == product)
             {
@@ -55,12 +57,11 @@ namespace LESCOnario.ViewModels
             _oldProduct = product;
         }
 
-        private void UpdateProducts(Profesor product)
+        private void UpdateProducts(Curso product)
         {
             var index = Products.IndexOf(product);
             Products.Remove(product);
             Products.Insert(index, product);
         }
-
     }
 }

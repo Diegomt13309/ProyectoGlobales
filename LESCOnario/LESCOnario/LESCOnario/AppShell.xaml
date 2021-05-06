@@ -53,9 +53,9 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:ProfesorPage}" />
         </Tab>
-        <Tab Title="Lista Profes">
+        <Tab Title="Lista Profesores">
             <ShellContent 
-                ContentTemplate="{DataTemplate local:ListProfesores}" />
+                ContentTemplate="{DataTemplate local:ListProfesoresPage}" />
         </Tab>
     </TabBar>
 
