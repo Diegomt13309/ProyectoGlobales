@@ -43,7 +43,7 @@ namespace LESCOnario.ViewModels
                 {
                     // hide previous selected item
                     _oldProduct.IsVisible = false;
-                    UpdateProducts(_oldProduct);
+                    UpdateProducts(product);
                 }
                 // show selected item
                 product.IsVisible = true;
