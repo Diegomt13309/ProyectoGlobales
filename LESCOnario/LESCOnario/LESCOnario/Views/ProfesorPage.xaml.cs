@@ -87,10 +87,5 @@ namespace LESCOnario.Views
             TFormulario.IsVisible = true;
             TLista.IsVisible = false;
         }
-
-        private async void btn_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync($"//yes");
-        }
     }
 }
