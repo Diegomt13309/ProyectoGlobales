@@ -108,7 +108,6 @@ namespace LESCOnario.ViewModels
             product.telefono = 0;
             product.email = "";
             product.password = "";
-            //btnSaveLabel = "Agregar";
         }
 
         public void ShowOrHidePoducts(CursoxProfe product)

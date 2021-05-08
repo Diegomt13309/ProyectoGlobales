@@ -11,28 +11,43 @@ namespace LESCOnario.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListCursosPage : ContentPage
     {
-        Curso c = new Curso();
+        Course c = new Course();
         CursoxProfe cx = new CursoxProfe();
         Profesor aux = new Profesor();
+        CoursesViewModel vm;
         public ListCursosPage(Profesor a)
         {
             InitializeComponent();
             aux = a;
+            vm = new CoursesViewModel();
+            this.BindingContext = vm;
         }
+
+        protected override void OnAppearing()
+        {
+            if (vm != null)
+                vm.GetCourses();
+
+            base.OnAppearing();
+        }
+
         private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var product = e.Item as Curso;
-            c.nombre = product.nombre;
+            var product = e.Item as Course;
+            c.ID = product.ID;
+            c.Name = product.Name;
+            c.Code = product.Code;
+            c.Quantity = product.Quantity;
             c.IsVisible = false;
-            cx.nombre = product.nombre;
             cx.IsVisible = false;
-            var vm = BindingContext as ListCursoViewModel;
+            vm = BindingContext as CoursesViewModel;
             vm?.ShowOrHidePoducts(product);
         }
 
         private async void Button_ClickedAsync(object sender, System.EventArgs e)
         {
             cx.id = aux.id;
+            cx.nombre = c.Name;
             try
             {
                 ProductDataBase productDatabase = new ProductDataBase();
