@@ -49,6 +49,10 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:DiccionaryPage}" />
         </Tab>
+        <Tab Title="About" Icon="diccionario.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:AboutUsPages}" />
+        </Tab>
     </TabBar>
 
     <!--
