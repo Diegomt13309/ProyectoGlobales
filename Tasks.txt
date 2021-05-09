@@ -1,0 +1,10 @@
+To Do:
+	-Base de datos en SQLite *
+	-Videos JUAN
+	-Perfil de usuario (Cambio de contraseña) JUAN 
+	-Acerca de…. (Historia documentos, ley 7600) DJE
+	-Diccionario 
+		Visualización (Palabras (https://www.youtube.com/watch?v=qG1CQFiHX6c) y abecedario)ABC DIEGO 
+		Test (JUEGO) DIEGO Y DJE 
+	-CRUD Profes JOSE
+	-CRUD CURSOS CRIS 

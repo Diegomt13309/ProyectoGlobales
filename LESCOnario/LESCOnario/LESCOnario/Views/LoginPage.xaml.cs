@@ -27,7 +27,8 @@ namespace LESCOnario.Views
             if (user!=null) {
                 await Shell.Current.GoToAsync("//yes");
             }
-            
+            //await Navigation.PushAsync(new AboutUsPages());
+
         }
     }
 }
