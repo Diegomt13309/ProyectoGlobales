@@ -10,7 +10,6 @@ namespace Lesconario.Services
     public class DataBaseStoreUser
     {
         readonly SQLiteAsyncConnection database;
-        List<User> all = new List<User>();
 
         public DataBaseStoreUser(string dbPath)
         {
@@ -48,34 +47,6 @@ namespace Lesconario.Services
         {
             // Delete a note.
             return database.DeleteAsync(note);
-        }
-
-        private async void addList()
-        {
-            all = await database.QueryAsync<User>("select * from User");
-        }
-
-        public List<User> getList()
-        {
-            addList();
-            return all;
-        }
-
-        public User getUser(int id)
-        {
-            List<User> aux = getList();
-            User u = new User();
-            for (int i = 0; i < aux.Count; i++)
-            {
-                if (aux[i].ID == id)
-                {
-                    u.ID = aux[i].ID;
-                    u.UserName = aux[i].UserName;
-                    u.Email = aux[i].Email;
-                    u.Password = aux[i].Password;
-                }
-            }
-            return u;
         }
 
     }
