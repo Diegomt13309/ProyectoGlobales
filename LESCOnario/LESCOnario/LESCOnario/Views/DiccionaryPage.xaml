@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Diccionario"
              x:Class="LESCOnario.Views.DiccionaryPage"
-             BackgroundColor="DarkRed">
+             BackgroundColor="DarkRed"
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Logout"
@@ -11,6 +13,13 @@
                  Order="Secondary"
                  Priority="0"
                  Command="{Binding LogOutCommand}"/>
+        
+        <ToolbarItem Text="About us"
+                 IconImageSource="logout.png"
+                 Order="Secondary"
+                 Priority="0"
+                 Clicked="about_us_button"
+                 />
     </ContentPage.ToolbarItems>
 
     <CollectionView ItemsSource="{Binding Cards}">
