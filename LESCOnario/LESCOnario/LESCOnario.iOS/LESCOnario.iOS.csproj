@@ -248,4 +248,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profesor.png" />
+  </ItemGroup>
 </Project>
