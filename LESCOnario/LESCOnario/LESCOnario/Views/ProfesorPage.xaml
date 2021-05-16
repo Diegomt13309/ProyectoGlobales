@@ -87,7 +87,10 @@
                                             <Label Text="Telefono:" Margin="2"/>
                                             <Entry Text="{Binding product.telefono}" Keyboard="Numeric" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
                                         </StackLayout>
-                                        <StackLayout Grid.Row="6" Orientation="Horizontal">
+                                        <StackLayout Grid.Row="6">
+                                            <Label Text="{Binding lblInfo}" Margin="2,2,2,5" TextColor="Red"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="7" Orientation="Horizontal">
                                             <Button x:Name="btn" Text="{Binding btnSaveLavel}" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
                                             BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
                                             Command="{Binding btnAgregarProfe}"/>
