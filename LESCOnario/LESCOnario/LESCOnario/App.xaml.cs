@@ -1,6 +1,5 @@
 ﻿using Lesconario.Services;
 using LESCOnario.Services;
-using LESCOnario.ViewModels;
 using LESCOnario.Views;
 using System;
 using System.IO;
@@ -13,7 +12,6 @@ namespace LESCOnario
     {
 
         static DataBaseStoreUser database;
-        static DataBaseStoreCourse database_course;
 
         public static DataBaseStoreUser Database
         {
@@ -26,19 +24,6 @@ namespace LESCOnario
                 return database;
             }
         }
-
-        public static DataBaseStoreCourse Database_course
-        {
-            get
-            {
-                if (database_course == null)
-                {
-                    database_course = new DataBaseStoreCourse(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Courses.db3"));
-                }
-                return database_course;
-            }
-        }
-
         public App()
         {
             InitializeComponent();

@@ -51,10 +51,16 @@
                 ContentTemplate="{DataTemplate local:ListProfesoresPage}" />
         </Tab>
         <Tab Title="Cursos" Icon="lista_c.png" >
+        <Tab Title="Lista Profesores">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:ListProfesoresPage}" />
+        </Tab>
+        <Tab Title="About" Icon="diccionario.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:CoursePage}" />
         </Tab>
     </TabBar>
+
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
@@ -62,4 +68,6 @@
     <TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
+
+
 </Shell>
