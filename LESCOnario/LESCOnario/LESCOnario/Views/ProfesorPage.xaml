@@ -12,7 +12,7 @@
                     <StackLayout VerticalOptions="Center" >
                         <StackLayout Orientation="Vertical" HeightRequest="663" WidthRequest="300" >
                             <Grid>
-                                <Image Source="lista.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill"/>
+                                <Image Source="lista.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" />
                                 <ScrollView>
                                     <ListView ItemsSource="{Binding Cursos}"
                                               HasUnevenRows="True"

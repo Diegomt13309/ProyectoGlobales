@@ -11,8 +11,8 @@
         <ToolbarItem Text="Logout"
                  IconImageSource="logout.png"
                  Order="Secondary"
-                 Priority="0"
-                 Command="{Binding LogOutCommand}"/>
+                 Priority="1"
+                 Clicked="logOutbutton"/>
         
         <ToolbarItem Text="About us"
                  IconImageSource="logout.png"

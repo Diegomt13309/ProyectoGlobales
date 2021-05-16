@@ -16,5 +16,9 @@ namespace LESCOnario
             Routing.RegisterRoute(nameof(DiccionaryPage), typeof(DiccionaryPage));
         }
 
+        private void TabBar_Appearing(object sender, EventArgs e)
+        {
+
+        }
     }
 }

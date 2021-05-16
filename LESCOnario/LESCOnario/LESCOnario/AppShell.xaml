@@ -33,38 +33,26 @@
         <ShellContent ContentTemplate="{DataTemplate local:WelcomePage}"/>
     </ShellItem>
 
-
-    
-
     <TabBar Route="yes">
-        <Tab Title="Browse12" Icon="tab_feed.png">
+        <Tab Title="About" Icon="about.png">
             <ShellContent 
-                ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About12" Icon="tab_about.png">
-            <ShellContent 
-                ContentTemplate="{DataTemplate local:AboutPage}" />
+                ContentTemplate="{DataTemplate local:AboutUsPages}" />
         </Tab>
         <Tab Title="ABC" Icon="diccionario.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:DiccionaryPage}" />
         </Tab>
-
-        <Tab Title="Cursos" Icon="tab_feed.png">
-            <ShellContent 
-                ContentTemplate="{DataTemplate local:CoursePage}" />
-        </Tab>
-        <Tab Title="Profesores">
+        <Tab Title="Profesor" Icon="profesor_i.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:ProfesorPage}" />
         </Tab>
-        <Tab Title="Lista Profesores">
+        <Tab Title="Profesores" Icon="profesor_i.png">
             <ShellContent 
                 ContentTemplate="{DataTemplate local:ListProfesoresPage}" />
         </Tab>
-        <Tab Title="About" Icon="diccionario.png">
+        <Tab Title="Cursos" Icon="lista_c.png" >
             <ShellContent 
-                ContentTemplate="{DataTemplate local:AboutUsPages}" />
+                ContentTemplate="{DataTemplate local:CoursePage}" />
         </Tab>
     </TabBar>
     <!--
