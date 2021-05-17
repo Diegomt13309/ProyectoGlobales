@@ -14,6 +14,7 @@ namespace LESCOnario.ViewModels
         public Command btnAgregarProfe { get; set; }
         private Profesor _products { get; set; }
         private string _btnSaveLabel { get; set; }
+        private string _lblInfo { get; set; }
         private ObservableCollection<CursoxProfe> _Cursos { get; set; }
         private CursoxProfe _oldProduct;
         private INavigation Navigation { get; set; }
@@ -55,6 +56,16 @@ namespace LESCOnario.ViewModels
             }
         }
 
+        public string lblInfo
+        {
+            get { return _lblInfo; }
+            set
+            {
+                _lblInfo = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string btnSaveLabel
         {
             get { return _btnSaveLabel; }
@@ -71,27 +82,48 @@ namespace LESCOnario.ViewModels
             {
                 var user = new User();
                 ProductDataBase productDatabase = new ProductDataBase();
-                int i = productDatabase.saveProduct(product).Result;
-                user.UserName = product.nombre;
-                user.Email = product.email;
-                user.Password = product.password;
-                product.idU = user.ID;
-                Profesor aux = product;
-                if (await App.Database.SaveNoteAsync(user) == 1)
+                if(product.nombre == "" || product.apellidos == "" || product.id == 0 || product.email == "" || product.password == "" || product.telefono == 0)
                 {
-                    if (i == 1)
+                    lblInfo = "Todos los datos del formulario deben llenarse correctamente";
+                    ClearProduct();
+                }
+                else
+                {
+                    bool find = productDatabase.findProfe(product);
+                    if(find == true && btnSaveLabel.Equals("Agregar"))
                     {
-                        if (btnSaveLabel.Equals("Agregar"))
-                        {
-                            ClearProduct();
-                            await Navigation.PushAsync(new ListCursosPage(aux));
-                        }
-                        else
-                        {
-                            ClearProduct();
-                            await Navigation.PushAsync(new ListProfesores());
-                        }
+                        lblInfo = "Profesor ya Existe";
+                        ClearProduct();
                     }
+                    else
+                    {
+                        int i = productDatabase.saveProduct(product).Result;
+                        user.UserName = product.nombre;
+                        user.Email = product.email;
+                        user.Password = product.password;
+                        product.idU = user.ID;
+                        Profesor aux = product;
+                        if (await App.Database.SaveNoteAsync(user) == 1)
+                        {
+                            if (i == 1)
+                            {
+                                if (btnSaveLabel.Equals("Agregar"))
+                                {
+                                    ClearProduct();
+                                    await Navigation.PushAsync(new ListCursosPage(aux));
+                                }
+                                else
+                                {
+                                    ClearProduct();
+                                    await Navigation.PushAsync(new ListProfesores());
+                                }
+                            }
+                            else
+                                lblInfo = "Ocurrio un problema y no se pudo guardar el Profesor";
+                        }
+
+                    }
+                    
                 }
             }
             catch (Exception ex)

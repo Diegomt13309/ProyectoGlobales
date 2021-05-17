@@ -115,5 +115,23 @@ namespace LESCOnario.Services
         {
             return Database.DeleteAsync(product);
         }
+
+        public bool findProfe(Profesor product)
+        {
+            bool aux = false;
+            var list = getProfesor().Result;
+            if (list != null && list.Count > 0)
+            {
+                foreach (var prod in list)
+                {
+                    if (prod.id == product.id)
+                    {
+                        aux = true;
+                    }
+                }
+            }
+            return aux;
+        }
+
     }
 }
