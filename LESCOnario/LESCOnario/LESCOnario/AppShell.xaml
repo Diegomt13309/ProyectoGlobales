@@ -34,13 +34,9 @@
     </ShellItem>   
 
     <TabBar Route="yes">
-        <Tab Title="Browse12" Icon="tab_feed.png">
+        <Tab Title="About" Icon="about.png">
             <ShellContent 
-                ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About12" Icon="tab_about.png">
-            <ShellContent 
-                ContentTemplate="{DataTemplate local:AboutPage}" />
+                ContentTemplate="{DataTemplate local:AboutUsPages}" />
         </Tab>
         <Tab Title="Videos">
             <ShellContent ContentTemplate="{DataTemplate local:VideoPage}"/>
@@ -52,8 +48,19 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:DiccionaryPage}" />
         </Tab>
+        <Tab Title="Profesor" Icon="profesor_i.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:ProfesorPage}" />
+        </Tab>
+        <Tab Title="Profesores" Icon="profesor_i.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:ListProfesoresPage}" />
+        </Tab>
+        <Tab Title="Cursos" Icon="lista_c.png" >
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:CoursePage}" />
+        </Tab>
     </TabBar>
-
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
@@ -61,6 +68,4 @@
     <TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
-
-
 </Shell>

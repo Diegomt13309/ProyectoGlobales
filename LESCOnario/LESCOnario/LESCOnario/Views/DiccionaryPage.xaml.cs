@@ -18,5 +18,14 @@ namespace LESCOnario.Views
             InitializeComponent();
             BindingContext = new CardViewModel();
         }
+
+        private async void about_us_button(object sender, EventArgs e) {
+            await Navigation.PushAsync(new AboutUsPages());
+        }
+
+        private async void logOutbutton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }

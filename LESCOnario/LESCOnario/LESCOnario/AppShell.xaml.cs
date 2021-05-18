@@ -17,5 +17,9 @@ namespace LESCOnario
             Routing.RegisterRoute(nameof(VideoPage), typeof(VideoPage));
         }
 
+        private void TabBar_Appearing(object sender, EventArgs e)
+        {
+
+        }
     }
 }

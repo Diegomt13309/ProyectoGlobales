@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<popup:PopupPage
+    x:Class="LESCOnario.Views.LescoHistoryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   >
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10" Margin="10">
+        <Frame  Padding="15">
+            <StackLayout>
+                <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" Text ="Historia de LESCO" />
+                <Label FontSize="Small"  VerticalOptions="Center" HorizontalOptions="Center" Text ="Antes de 1939, la historia de la LESCO es poco conocida, pero se sugiere que pudo nacer de una combinación de señas autóctonas con  señas de la lengua de señas española. En 1940 se funda la Escuela de Enseñanza Especial Fernando Centeno Güell, que si bien promovía el método oralista, sirvió como un centro de reunión para personas sordas. " />
+                <Label Text="La naturaleza del LESCO fue alterada drásticamente en 1977, con la publicación del diccionario Hacia una nueva forma de comunicación con el sordo. Este diccionario fue el resultado de un proyecto conjunto de costarricenses con la Universidad de Gallaudet, una institución de educación superior estadounidense para sordos. El contacto con la Lengua de Señas Americana (ASL) produjo un proceso de relexicalización (Sánchez Avendaño, 2013) en el que, por la influencia que tenía uno de los señantes involucrados en el proyecto en la comunidad sorda costarricense, un gran número de señas del LESCO original fueron sustituidas por señas del ASL, en poblaciones más jóvenes.
+"/>
+
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</popup:PopupPage>
