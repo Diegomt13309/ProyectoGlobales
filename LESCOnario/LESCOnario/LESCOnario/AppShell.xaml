@@ -38,10 +38,10 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:AboutUsPages}" />
         </Tab>
-        <Tab Title="Videos">
+        <Tab Title="Videos" Icon="video.png">
             <ShellContent ContentTemplate="{DataTemplate local:VideoPage}"/>
         </Tab>
-        <Tab Title="Perfil">
+        <Tab Title="Perfil" Icon="perfil.png">
             <ShellContent ContentTemplate="{DataTemplate local:PerfilPage}"/>
         </Tab>
         <Tab Title="ABC" Icon="diccionario.png">
