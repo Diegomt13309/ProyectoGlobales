@@ -1,4 +1,4 @@
-﻿using Lesconario.Models;
+using Lesconario.Models;
 using LESCOnario.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -23,12 +23,9 @@ namespace LESCOnario.Views
             var user = new User();
             
             user = await App.Database.GetNoteAsync(EntryUserEmail.Text, EntryUserPassword.Text);
-
             if (user!=null) {
                 await Shell.Current.GoToAsync("//yes");
             }
-            //await Navigation.PushAsync(new AboutUsPages());
-
         }
     }
 }
