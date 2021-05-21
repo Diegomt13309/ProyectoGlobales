@@ -19,7 +19,7 @@ namespace LESCOnario.ViewModels
                 new CardModel
                 {
                     Letter = "A",
-                    Image = "a.png"
+                    Image = "a.jpg"
                 },
                 new CardModel
                 {
@@ -99,7 +99,7 @@ namespace LESCOnario.ViewModels
                 new CardModel
                 {
                     Letter = "Ñ",
-                    Image = "nn.jpg"
+                    Image = "n1.jpg"
                 },
                 new CardModel
                 {

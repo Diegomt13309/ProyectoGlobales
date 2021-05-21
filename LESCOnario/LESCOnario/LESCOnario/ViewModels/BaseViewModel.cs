@@ -43,7 +43,7 @@ namespace LESCOnario.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
-            var changed = PropertyChanged;
+            var changed = PropertyChanged; 
             if (changed == null)
                 return;
 

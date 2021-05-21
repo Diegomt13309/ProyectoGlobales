@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Videos"
+             x:Class="LESCOnario.Views.VideoPage">
+
+    <StackLayout BackgroundColor="White">
+        <CarouselView ItemsSource="{Binding lescoVideos}" BackgroundColor="White" Loop="False" CurrentItemChanged="CarouselView_CurrentItemChanged">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="White" >
+                        <Frame HasShadow="true" BorderColor="White"
+                                   CornerRadius="5" Margin="20"
+                                   HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding title}" FontAttributes="Bold" FontSize="Large"
+                                           HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+                                <Image Source="{Binding url}" Aspect="AspectFill" HeightRequest="150"
+                                           WidthRequest="150" HorizontalOptions="Center"/>
+                                <Label Text="{Binding description}" TextColor="Black" />
+                            </StackLayout>
+                        </Frame>                        
+                    </StackLayout>                    
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Button Text="Play" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage> 
