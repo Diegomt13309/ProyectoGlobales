@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Lista"
-             BackgroundColor="DarkRed"
+             BackgroundImageSource="fondo.png"
              x:Class="LESCOnario.Views.ListProfesores">
 
-    <Grid BackgroundColor="White">
-        <Image Source="lista.png" Aspect="Fill"/>
+    <Grid>
+        <Image Source="logoUNA.png" Aspect="Fill"/>
         <ScrollView>
             <ListView ItemsSource="{Binding lstProducts}"
                     HasUnevenRows="True"
@@ -15,7 +15,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="20">
+                            <StackLayout Padding="20" BackgroundColor="#8a516e73">
                                 <Label Text="{Binding nombre}"
                                TextColor="Black"
                                FontSize="15"/>
