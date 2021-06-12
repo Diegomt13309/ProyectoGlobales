@@ -27,5 +27,10 @@ namespace LESCOnario.Views
                 await Shell.Current.GoToAsync("//yes");
             }
         }
+
+        private async void signup_page(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
+        }
     }
 }

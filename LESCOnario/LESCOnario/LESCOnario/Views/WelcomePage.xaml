@@ -10,14 +10,24 @@
              Shell.FlyoutBehavior="Disabled"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
+              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+            
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Test" />
-    </ContentPage.ToolbarItems>
-    <StackLayout>
+   <ContentPage.Content>
+       <Grid>
+           <magic:GradientGLView  VerticalOptions="FillAndExpand">
+                    <magic:GradientGLView.GradientSource>
+                        <magic:LinearGradient Angle="0">
+                            <magic:GradientStop Color="#990000" Offset="0"/>
+                            <magic:GradientStop Color="#6777aa" Offset="94"/>
+                        </magic:LinearGradient>
+                    </magic:GradientGLView.GradientSource>
+
+                </magic:GradientGLView>
+            <StackLayout>
         <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
-            <Label Text="Bienvenido a LESCO para todos!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
+            <Label Text="Bienvenido a LESCOnario!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
         </Frame>
         <Grid VerticalOptions="EndAndExpand" BackgroundColor="#990000" Padding="5">
             <Grid.RowDefinitions>
@@ -36,5 +46,9 @@
             </StackLayout>
         </Grid>
     </StackLayout>
+       </Grid>
+
+   </ContentPage.Content>
+   
 
 </ContentPage>

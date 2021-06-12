@@ -4,29 +4,61 @@
              x:Class="LESCOnario.Views.LoginPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              >
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout Grid.Row="1">
-                        <Entry Placeholder="Email" FontSize="20" x:Name="EntryUserEmail"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="2">
-                        <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryUserPassword"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="3">
-                        <Button Text="Iniciar Session" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
-                                BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
+            <Grid>
+                <magic:GradientGLView  VerticalOptions="FillAndExpand">
+                    <magic:GradientGLView.GradientSource>
+                        <magic:LinearGradient Angle="0">
+                            <magic:GradientStop Color="#990000" Offset="0"/>
+                            <magic:GradientStop Color="#6777aa" Offset="94"/>
+                        </magic:LinearGradient>
+                    </magic:GradientGLView.GradientSource>
+
+                </magic:GradientGLView>
+                <StackLayout >
+                    <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="1">
+                            <Label Text=" LESCOnario"  FontSize="30" FontFamily="Italic" HorizontalTextAlignment="Center" TextColor="#d5cbe6"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2">
+                            <Entry Placeholder="Email" FontSize="20" x:Name="EntryUserEmail" BackgroundColor="#d5cbe6" Opacity="0.7"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3">
+                            <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryUserPassword" BackgroundColor="#d5cbe6" Opacity="0.7"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4">
+                            <Button Text="Iniciar Session"  VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#d5cbe6" 
+                                BackgroundColor="#a10000" BorderColor="#d5cbe6" BorderWidth="1" CornerRadius="5" 
                                 Clicked="Button_Clicked"></Button>
-                    </StackLayout>
-                </Grid>
-            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Row="5">
+                            <Button Text="Registrarse"  VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#d5cbe6" 
+                                BackgroundColor="#a10000" BorderColor="#d5cbe6" BorderWidth="1" CornerRadius="5" 
+                                Clicked="signup_page"></Button>
+                        </StackLayout>
+
+                    </Grid>
+
+                </StackLayout>
+
+
+            </Grid>
+
         </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
