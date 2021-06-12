@@ -35,19 +35,19 @@
                             <Label Text=" LESCOnario"  FontSize="30" FontFamily="Italic" HorizontalTextAlignment="Center" TextColor="#d5cbe6"/>
                         </StackLayout>
                         <StackLayout Grid.Row="2">
-                            <Entry Placeholder="Email" FontSize="20" x:Name="EntryUserEmail" BackgroundColor="#d5cbe6" Opacity="0.7"/>
+                            <Entry Placeholder="Email" FontFamily="Italic" FontSize="20" x:Name="EntryUserEmail" BackgroundColor="#d5cbe6" Opacity="0.7"/>
                         </StackLayout>
                         <StackLayout Grid.Row="3">
-                            <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryUserPassword" BackgroundColor="#d5cbe6" Opacity="0.7"/>
+                            <Entry Placeholder="Contraseña" FontFamily="Italic" IsPassword="True" FontSize="20" x:Name="EntryUserPassword" BackgroundColor="#d5cbe6" Opacity="0.7"/>
                         </StackLayout>
                         <StackLayout Grid.Row="4">
-                            <Button Text="Iniciar Session"  VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#d5cbe6" 
-                                BackgroundColor="#a10000" BorderColor="#d5cbe6" BorderWidth="1" CornerRadius="5" 
+                            <Button Text="Iniciar Session" FontFamily="Italic" VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#d5cbe6" 
+                                BackgroundColor="#a10000" BorderColor="#d5cbe6" BorderWidth="1" CornerRadius="50" 
                                 Clicked="Button_Clicked"></Button>
                         </StackLayout>
                         <StackLayout Grid.Row="5">
-                            <Button Text="Registrarse"  VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#d5cbe6" 
-                                BackgroundColor="#a10000" BorderColor="#d5cbe6" BorderWidth="1" CornerRadius="5" 
+                            <Button Text="¿Nuevo? Registrarse" FontFamily="Italic" VerticalOptions="CenterAndExpand" WidthRequest="120" TextColor="#a10000" 
+                                BackgroundColor="#d5cbe6" BorderColor="#a10000" BorderWidth="1" CornerRadius="50" 
                                 Clicked="signup_page"></Button>
                         </StackLayout>
 
