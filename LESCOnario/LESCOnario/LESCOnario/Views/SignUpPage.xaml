@@ -4,33 +4,59 @@
              x:Class="LESCOnario.Views.SignUpPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
+               xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              >
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout Grid.Row="0">
-                        <Entry Placeholder="Usuario" FontSize="20" x:Name="EntryUserName"/>
+            <Grid>
+                <magic:GradientGLView  VerticalOptions="FillAndExpand">
+                    <magic:GradientGLView.GradientSource>
+                        <magic:LinearGradient Angle="0">
+                            <magic:GradientStop Color="#990000" Offset="0"/>
+                            <magic:GradientStop Color="#6777aa" Offset="94"/>
+                        </magic:LinearGradient>
+                    </magic:GradientGLView.GradientSource>
+
+                </magic:GradientGLView>
+                <StackLayout>
+                    <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                          <StackLayout Grid.Row="0">
+                            <Label Text=" Inicio de Sesión LESCOnario"  FontSize="30" FontFamily="Italic" HorizontalTextAlignment="Center" TextColor="#6777aa"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1">
+                            <Entry Placeholder="Usuario" FontSize="20" x:Name="EntryUserName"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2">
+                            <Entry Placeholder="Email" FontSize="20" x:Name="EntryUserEmail"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3">
+                            <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryUserPassword"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4">
+                        <Label Text="Cedula" TextColor="Black" FontSize="Subtitle"/>
+                        <Entry FontSize="20" Placeholder="102020202" x:Name="EntryUserCedula"
+                               TextColor="Black" IsVisible="true" PlaceholderColor="LightGray" BackgroundColor="Transparent"/>
                     </StackLayout>
-                    <StackLayout Grid.Row="1">
-                        <Entry Placeholder="Email" FontSize="20" x:Name="EntryUserEmail"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="2">
-                        <Entry Placeholder="Contraseña" IsPassword="True" FontSize="20" x:Name="EntryUserPassword"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="3">
+                    <StackLayout Grid.Row="5">                        
                         <Button Text="Registrarse" HorizontalOptions="CenterAndExpand" WidthRequest="120" TextColor="White" 
                                 BackgroundColor="#c70404" BorderColor="White" BorderWidth="2" CornerRadius="20" 
                                 Clicked="Button_ClickedAsync"></Button>
                     </StackLayout>
-                </Grid>
-            </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

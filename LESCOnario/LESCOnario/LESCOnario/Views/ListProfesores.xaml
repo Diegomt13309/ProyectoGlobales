@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Lista"
              BackgroundColor="DarkRed"
-             x:Class="LESCOnario.Views.ListProfesores">
+             x:Class="LESCOnario.Views.ListProfesores"
+             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             >
 
     <Grid BackgroundColor="White">
         <Image Source="lista.png" Aspect="Fill"/>

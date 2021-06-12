@@ -24,6 +24,7 @@ namespace LESCOnario.Views
             user.UserName = EntryUserName.Text;
             user.Email = EntryUserEmail.Text;
             user.Password = EntryUserPassword.Text;
+            user.Cedula = EntryUserCedula.Text;
             if (!string.IsNullOrWhiteSpace(user.UserName))
             {
                 if (await App.Database.SaveNoteAsync(user)==1)

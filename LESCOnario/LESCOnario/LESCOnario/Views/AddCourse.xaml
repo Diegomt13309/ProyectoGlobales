@@ -4,7 +4,11 @@
              x:Class="LESCOnario.Views.AddCourse"
              Title="Agregar Curso"
              Visual="Material"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                      Padding="10">

@@ -9,13 +9,26 @@ namespace Lesconario.Services
 {
     public class DataBaseStoreUser
     {
+        private User currentUser;
+
         readonly SQLiteAsyncConnection database;
         List<User> all = new List<User>();
 
         public DataBaseStoreUser(string dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
+            currentUser = new User();
             database.CreateTableAsync<User>().Wait();
+        }
+
+        public void setCurrentUser(User user)
+        {
+            currentUser = user;
+        }
+
+        public User getCurrentUser()
+        {
+            return currentUser;
         }
 
         public Task<List<User>> NotesAsync =>
