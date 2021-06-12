@@ -21,7 +21,8 @@ namespace LESCOnario.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             var user = new User();
-            
+            var name = EntryUserEmail.Text;
+            var pass = EntryUserPassword.Text;
             user = await App.Database.GetNoteAsync(EntryUserEmail.Text, EntryUserPassword.Text);
             App.Database.setCurrentUser(user);
             if (user!=null) {

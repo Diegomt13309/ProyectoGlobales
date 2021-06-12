@@ -39,7 +39,7 @@ namespace Lesconario.Services
         {
             // Get a specific note.
             return database.Table<User>()
-                            .Where(i => i.Email.Equals(email) || i.Password.Equals(password))
+                            .Where(i => i.Email.Equals(email) && i.Password.Equals(password))
                             .FirstOrDefaultAsync();
         }
 
