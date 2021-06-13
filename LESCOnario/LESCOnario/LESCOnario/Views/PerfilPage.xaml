@@ -8,31 +8,38 @@
         <StackLayout BackgroundColor="Transparent" Orientation="Vertical" >
             <Frame HasShadow="True" BorderColor="White" CornerRadius="8" BackgroundColor="White" Margin="5">
                 <StackLayout>
-                    <Label Text="Nombre Completo" TextColor="Black" FontSize="Subtitle"/>
+                    <Label Text="Email" TextColor="Black" FontSize="Subtitle"/>
                     <Entry TextColor="Black" BackgroundColor="Transparent" Placeholder="Ej: Mari@ Chavez" FontSize="Body" IsVisible="true"
-                           IsReadOnly="True" PlaceholderColor="LightGray" />
+                           IsReadOnly="true" PlaceholderColor="LightGray" x:Name="EmailEntry"/>
                 </StackLayout>
             </Frame>
             <Frame HasShadow="True" BorderColor="White" CornerRadius="8" BackgroundColor="White" Margin="5">
                 <StackLayout>
                     <Label Text="Cedula" TextColor="Black" FontSize="Subtitle"/>
                     <Entry TextColor="Black" BackgroundColor="Transparent" Placeholder="Ej: 116340204" FontSize="Body" IsVisible="true"
-                           IsReadOnly="True" PlaceholderColor="LightGray" />
+                           IsReadOnly="true" PlaceholderColor="LightGray" x:Name="CedulaEntry"/>
                 </StackLayout>
             </Frame>
             <Frame HasShadow="True" BorderColor="White" CornerRadius="8" BackgroundColor="White" Margin="5">
                 <StackLayout>
                     <Label Text="Nombre de usuario" TextColor="Black" FontSize="Subtitle"/>
                     <Entry TextColor="Black" BackgroundColor="Transparent" Placeholder="Ej: Joyboy14_16" FontSize="Body" IsVisible="true"
-                           IsReadOnly="True" PlaceholderColor="LightGray" />
+                           IsReadOnly="true" PlaceholderColor="LightGray" x:Name="UsernameEntry"/>
                 </StackLayout>
             </Frame>
             <Frame HasShadow="True" BorderColor="White" CornerRadius="8" BackgroundColor="White" Margin="5">
                 <StackLayout>
                     <Label Text="Contraseña" TextColor="Black" FontSize="Subtitle"/>
                     <Entry TextColor="Black" BackgroundColor="Transparent" Placeholder="Ej: ########" IsPassword="True" FontSize="Body" IsVisible="true"
-                           IsReadOnly="true" PlaceholderColor="LightGray" />
+                           IsReadOnly="true" PlaceholderColor="LightGray" x:Name="PasswordEntry"/>
                 </StackLayout>
+            </Frame>
+            <Button Text="Editar" Clicked="editarUsuario" x:Name="editButton" IsVisible="true"></Button>
+            <Frame>
+                <FlexLayout>
+                    <Button Text="Aceptar" x:Name="aceptarButton" IsVisible="false" Clicked="editAceptar" ></Button>
+                    <Button Text="Cancelar" x:Name="cancelarButton" IsVisible="false" Clicked="editCancelar" ></Button>
+                </FlexLayout>
             </Frame>
         </StackLayout>
     </ScrollView>
