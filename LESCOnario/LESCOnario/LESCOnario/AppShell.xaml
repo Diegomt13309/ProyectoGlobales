@@ -60,6 +60,10 @@
             <ShellContent 
                 ContentTemplate="{DataTemplate local:CoursePage}" />
         </Tab>
+        <Tab Title="Contacto" Icon="email.png" >
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:EmailPage}" />
+        </Tab>
     </TabBar>
     <!--
         If you would like to navigate to this content you can do so by calling

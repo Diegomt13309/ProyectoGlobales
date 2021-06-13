@@ -252,9 +252,12 @@
     <BundleResource Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\lista.png" />
+    <BundleResource Include="Resources\fondo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\profesor.png" />
+    <BundleResource Include="Resources\logoUNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email.png" />
   </ItemGroup>
 </Project>
