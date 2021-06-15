@@ -14,41 +14,50 @@
             
              >
 
-   <ContentPage.Content>
-       <Grid>
-           <magic:GradientGLView  VerticalOptions="FillAndExpand">
-                    <magic:GradientGLView.GradientSource>
-                        <magic:LinearGradient Angle="0">
-                            <magic:GradientStop Color="#990000" Offset="0"/>
-                            <magic:GradientStop Color="#6777aa" Offset="94"/>
-                        </magic:LinearGradient>
-                    </magic:GradientGLView.GradientSource>
+    <ContentPage.Content>
+        <Grid>
+            <magic:GradientGLView  VerticalOptions="FillAndExpand">
+                <magic:GradientGLView.GradientSource>
+                    <magic:LinearGradient Angle="0">
+                        <magic:GradientStop Color="#990000" Offset="0"/>
+                        <magic:GradientStop Color="#6777aa" Offset="94"/>
+                    </magic:LinearGradient>
+                </magic:GradientGLView.GradientSource>
 
-                </magic:GradientGLView>
-            <StackLayout>
-        <Frame BackgroundColor="#990000" Padding="2" CornerRadius="20" BorderColor="White">
-            <Label Text="Bienvenido a LESCOnario!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
-        </Frame>
-        <Grid VerticalOptions="EndAndExpand" BackgroundColor="#990000" Padding="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0" Grid.Column="0" >
-                <Button Text="Iniciar Sesion" HorizontalOptions="CenterAndExpand" WidthRequest="100" 
+            </magic:GradientGLView>
+            <Grid>
+                <StackLayout>
+                    <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0">
+                            <Label Text="¡Bienvenido a LESCOnario!" HorizontalTextAlignment="Center" TextColor="White" FontSize="40" FontFamily="Italic" Margin="50"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1">
+                            <Button Text="Iniciar Sesion"  WidthRequest="100" 
                         TextColor="White" BackgroundColor="#c70404" Clicked="login_page" BorderColor="White" 
                         BorderWidth="2" CornerRadius="20"></Button>
-            </StackLayout>
-            <StackLayout Grid.Row="0" Grid.Column="1">
-                <Button Text="Resgistro App" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                        </StackLayout>
+                        <StackLayout Grid.Row="2">
+                            <Button Text="Resgistro App" WidthRequest="100"
                         TextColor="White" BackgroundColor="#c70404" Clicked="signup_page" BorderColor="White" 
                         BorderWidth="2" CornerRadius="20"></Button>
-            </StackLayout>
-        </Grid>
-    </StackLayout>
-       </Grid>
+                        </StackLayout>
 
-   </ContentPage.Content>
-   
+
+                    </Grid>
+
+
+                </StackLayout>
+
+            </Grid>
+
+          </Grid>
+
+    </ContentPage.Content>
+
 
 </ContentPage>

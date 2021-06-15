@@ -34,10 +34,10 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition  Width="*" />
         </Grid.ColumnDefinitions>
-        <Button BackgroundColor="#750000" Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White"/>
-        <Button BackgroundColor="#4A0000" Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" />
-        <Button BackgroundColor="#290000" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" />
-        <Button Grid.Row="1" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#B81414"/>
+        <Button BackgroundColor="#d5cbe6" Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White"/>
+        <Button BackgroundColor="#990000" Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" />
+        <Button BackgroundColor="#6777aa" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" />
+        <Button Grid.Row="1" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#d5cbe6"/>
 
     </Grid>
 </ContentPage>
