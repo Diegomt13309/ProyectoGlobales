@@ -38,12 +38,12 @@
                         </StackLayout>
                         <StackLayout Grid.Row="1">
                             <Button Text="Iniciar Sesion"  WidthRequest="100" 
-                        TextColor="White" BackgroundColor="#c70404" Clicked="login_page" BorderColor="White" 
+                        TextColor="#990000" BackgroundColor="#d5cbe6" Clicked="login_page" BorderColor="#990000" 
                         BorderWidth="2" CornerRadius="20"></Button>
                         </StackLayout>
                         <StackLayout Grid.Row="2">
                             <Button Text="Resgistro App" WidthRequest="100"
-                        TextColor="White" BackgroundColor="#c70404" Clicked="signup_page" BorderColor="White" 
+                        TextColor="#990000" BackgroundColor="#d5cbe6" Clicked="signup_page" BorderColor="#990000" 
                         BorderWidth="2" CornerRadius="20"></Button>
                         </StackLayout>
 
