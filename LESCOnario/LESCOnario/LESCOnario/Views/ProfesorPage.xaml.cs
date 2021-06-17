@@ -26,7 +26,7 @@ namespace LESCOnario.Views
             }
             catch (Exception ex)
             {
-
+                throw new Exception(ex.StackTrace);
             }
         }
 

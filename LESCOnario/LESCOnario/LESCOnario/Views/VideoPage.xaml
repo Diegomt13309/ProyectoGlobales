@@ -5,11 +5,11 @@
              x:Class="LESCOnario.Views.VideoPage">
 
     <StackLayout BackgroundColor="White">
-        <CarouselView ItemsSource="{Binding lescoVideos}" BackgroundColor="White" Loop="False" CurrentItemChanged="CarouselView_CurrentItemChanged">
+        <CarouselView ItemsSource="{Binding lescoVideos}" BackgroundColor="White" Loop="True" CurrentItemChanged="CarouselView_CurrentItemChanged" >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="White" >
-                        <Frame HasShadow="true" BorderColor="White"
+                        <Frame HasShadow="true" BorderColor="Red"
                                    CornerRadius="5" Margin="20"
                                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                             <StackLayout>
@@ -24,6 +24,13 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <Button Text="Play" Clicked="Button_Clicked"/>
+        <Button Text="Play" Clicked="Button_Clicked" CornerRadius="50">
+            <Button.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#990000" Offset="0"/>
+                <GradientStop Color="#6777aa" Offset="94"/>
+            </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </StackLayout>
 </ContentPage> 

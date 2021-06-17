@@ -23,7 +23,7 @@ namespace LESCOnario.Views
             var user = new User();
             var name = EntryUserEmail.Text;
             var pass = EntryUserPassword.Text;
-            user = await App.Database.GetNoteAsync(EntryUserEmail.Text, EntryUserPassword.Text);
+            user = await App.Database.GetUserAsync(EntryUserEmail.Text, EntryUserPassword.Text);
             App.Database.setCurrentUser(user);
             if (user!=null) {
                 await Shell.Current.GoToAsync("//yes");

@@ -31,35 +31,35 @@ namespace Lesconario.Services
             return currentUser;
         }
 
-        public Task<List<User>> NotesAsync =>
-            //Get all notes.
+        public Task<List<User>> UsersAsync =>
+            //Get all users.
             database.Table<User>().ToListAsync();
 
-        public Task<User> GetNoteAsync(string email, string password)
+        public Task<User> GetUserAsync(string email, string password)
         {
-            // Get a specific note.
+            // Get a specific user.
             return database.Table<User>()
                             .Where(i => i.Email.Equals(email) && i.Password.Equals(password))
                             .FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveNoteAsync(User note)
+        public Task<int> SaveUserAsync(User note)
         {
             if (note.ID != 0)
             {
-                // Update an existing note.
+                // Update an existing user.
                 return database.UpdateAsync(note);
             }
             else
             {
-                // Save a new note.
+                // Save a new user.
                 return database.InsertAsync(note);
             }
         }
 
-        public Task<int> DeleteNoteAsync(User note)
+        public Task<int> DeleteUserAsync(User note)
         {
-            // Delete a note.
+            // Delete a user.
             return database.DeleteAsync(note);
         }
 

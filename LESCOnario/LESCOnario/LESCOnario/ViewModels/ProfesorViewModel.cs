@@ -103,7 +103,7 @@ namespace LESCOnario.ViewModels
                         user.Password = product.password;
                         product.idU = user.ID;
                         Profesor aux = product;
-                        if (await App.Database.SaveNoteAsync(user) == 1)
+                        if (await App.Database.SaveUserAsync(user) == 1)
                         {
                             if (i == 1)
                             {
@@ -128,6 +128,7 @@ namespace LESCOnario.ViewModels
             }
             catch (Exception ex)
             {
+                throw new Exception(ex.StackTrace);
             }
         }
 
@@ -195,6 +196,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
+                throw new Exception(ex.StackTrace);
             }
         }
 
@@ -211,6 +213,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
+                throw new Exception(ex.StackTrace);
             }
         }
 

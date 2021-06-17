@@ -53,7 +53,7 @@ namespace LESCOnario.Views
         private async void Button_ClickedAsync_1(object sender, System.EventArgs e)
         {
             u = App.Database.getUser(p.idU);
-            await App.Database.DeleteNoteAsync(u);
+            await App.Database.DeleteUserAsync(u);
             try
             {
                 if (p.id != 0)
@@ -81,7 +81,7 @@ namespace LESCOnario.Views
             }
             catch (Exception ex)
             {
-
+                throw new Exception(ex.StackTrace);
             }
             await Navigation.PushAsync(new ListProfesores());
         }

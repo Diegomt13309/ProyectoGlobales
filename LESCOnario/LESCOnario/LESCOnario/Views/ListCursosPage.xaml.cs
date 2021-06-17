@@ -61,6 +61,7 @@ namespace LESCOnario.Views
             catch (Exception ex)
             {
                 await DisplayAlert("Lo Sentimos", "Curso no Asignado o Ya Existe", "OK");
+                Console.WriteLine(ex.StackTrace);
             }
             await Navigation.PushAsync(new ListCursosPage(aux));
         }

@@ -81,6 +81,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
+                throw new Exception(ex.Message);
             }
         }
 
@@ -97,6 +98,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
+                throw new Exception(ex.StackTrace);
             }
         }
 

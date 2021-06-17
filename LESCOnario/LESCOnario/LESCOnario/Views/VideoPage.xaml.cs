@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace LESCOnario.Views
 {
@@ -54,9 +55,10 @@ namespace LESCOnario.Views
             }
         }
 
+        
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("vnd.youtube://www.youtube.com/watch?v=" + _currentItem.id));
+            Launcher.OpenAsync(new Uri("vnd.youtube://www.youtube.com/watch?v=" + _currentItem.id));
         }
 
         private void CarouselView_CurrentItemChanged(object sender, CurrentItemChangedEventArgs e)

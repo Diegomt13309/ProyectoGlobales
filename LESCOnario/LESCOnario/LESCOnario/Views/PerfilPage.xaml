@@ -4,7 +4,7 @@
              x:Class="LESCOnario.Views.PerfilPage"
              Title="Perfil de Usuario">
 
-    <ScrollView BackgroundColor="White" Orientation="Vertical" Padding="10">
+    <ScrollView BackgroundColor="Gray" Orientation="Vertical" Padding="10">
         <StackLayout BackgroundColor="Transparent" Orientation="Vertical" >
             <Frame HasShadow="True" BorderColor="White" CornerRadius="8" BackgroundColor="White" Margin="5">
                 <StackLayout>
@@ -34,11 +34,32 @@
                            IsReadOnly="true" PlaceholderColor="LightGray" x:Name="PasswordEntry"/>
                 </StackLayout>
             </Frame>
-            <Button Text="Editar" Clicked="editarUsuario" x:Name="editButton" IsVisible="true"></Button>
-            <Frame>
+            <Button Text="Editar" Clicked="editarUsuario" x:Name="editButton" IsVisible="true">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#990000" Offset="0"/>
+                        <GradientStop Color="#6777aa" Offset="94"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Frame BackgroundColor="Gray">
                 <FlexLayout>
-                    <Button Text="Aceptar" x:Name="aceptarButton" IsVisible="false" Clicked="editAceptar" ></Button>
-                    <Button Text="Cancelar" x:Name="cancelarButton" IsVisible="false" Clicked="editCancelar" ></Button>
+                    <Button Text="Aceptar" x:Name="aceptarButton" IsVisible="false" Clicked="editAceptar" >
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#990000" Offset="0"/>
+                                <GradientStop Color="#6777aa" Offset="94"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button Text="Cancelar" x:Name="cancelarButton" IsVisible="false" Clicked="editCancelar" >
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#990000" Offset="0"/>
+                                <GradientStop Color="#6777aa" Offset="94"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
                 </FlexLayout>
             </Frame>
         </StackLayout>
