@@ -81,7 +81,7 @@ namespace LESCOnario.Views
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.StackTrace);
+               
             }
             await Navigation.PushAsync(new ListProfesores());
         }

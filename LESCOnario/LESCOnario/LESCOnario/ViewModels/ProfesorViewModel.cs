@@ -128,7 +128,7 @@ namespace LESCOnario.ViewModels
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.StackTrace);
+               
             }
         }
 
@@ -196,7 +196,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
-                throw new Exception(ex.StackTrace);
+                
             }
         }
 
@@ -213,7 +213,7 @@ namespace LESCOnario.ViewModels
 
             catch (Exception ex)
             {
-                throw new Exception(ex.StackTrace);
+                
             }
         }
 
