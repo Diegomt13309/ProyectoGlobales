@@ -3,46 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LESCOnario.Views.EmailPage"
              Title="Contacto"
-             BackgroundImageSource="fondo.png">
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Contacto" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Italic"/>
-            <ContentView Padding="10,0" IsVisible="true" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
-                <StackLayout VerticalOptions="Center" >
-                    <StackLayout Orientation="Vertical" HeightRequest="663" WidthRequest="300" >
-                        <Grid IsVisible="true">
-                            <Image Source="logoUNA.png" Aspect="Fill"/>
-                            <Frame CornerRadius="40" BorderColor="Black" Background="rgba(255,255,255,0.2)" HeightRequest="600">
-                                <Grid Padding="20" RowSpacing="20">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <StackLayout Grid.Row="0">
-                                        <Label Text="Correo:" Margin="2" TextColor="Black"/>
-                                        <Entry x:Name="email" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
-                                    </StackLayout>
-                                    <StackLayout Grid.Row="1">
-                                        <Label Text="Asunto:" Margin="2" TextColor="Black"/>
-                                        <Entry x:Name="asunto" FontSize="20" HorizontalOptions="FillAndExpand" PlaceholderColor="Black"/>
-                                    </StackLayout>
-                                    <StackLayout Grid.Row="2">
-                                        <Label Text="Mensaje:" Margin="2" TextColor="Black"/>
-                                        <Editor  x:Name="mensaje" Placeholder="Escribe aquí el mensaje" PlaceholderColor="Black" HeightRequest="120" />
-                                    </StackLayout>
-                                    <StackLayout Grid.Row="3">
-                                        <Button Text="Enviar" HorizontalOptions="CenterAndExpand" WidthRequest="160" TextColor="White" 
-                                            BackgroundColor="Green" BorderColor="White" BorderWidth="2" CornerRadius="20"  
-                                            Clicked="Button_Clicked"/>
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </Grid>
-                    </StackLayout>
-                    </StackLayout>
-                </ContentView>
+        <Grid>
+            <magic:GradientGLView  VerticalOptions="FillAndExpand">
+                <magic:GradientGLView.GradientSource>
+                    <magic:LinearGradient Angle="0">
+                        <magic:GradientStop Color="#990000" Offset="0"/>
+                        <magic:GradientStop Color="#6777aa" Offset="94"/>
+                    </magic:LinearGradient>
+                </magic:GradientGLView.GradientSource>
+            </magic:GradientGLView>
+            <StackLayout Margin="10,10,10,20">
+                <Image Source="logoUNA.png" HeightRequest="100" />
+
             </StackLayout>
+            <Grid Margin="20,60,20,0" VerticalOptions="CenterAndExpand" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1" Margin="10,0,10,0">
+                    <Label Text="Contacto" FontSize="30" FontFamily="Italic" HorizontalTextAlignment="Center" TextColor="#990000"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Margin="10,0,10,0">
+                    <Entry x:Name="email" Placeholder="Email" FontFamily="Italic" FontSize="18" HorizontalOptions="FillAndExpand" PlaceholderColor="#990000" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" Margin="10,0,10,0">
+                    <Entry x:Name="asunto" Placeholder="Asunto" FontFamily="Italic" FontSize="18" HorizontalOptions="FillAndExpand" PlaceholderColor="#990000"/>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Margin="10,0,10,0">
+                    <Editor  x:Name="mensaje" Placeholder="Escribe aquí el mensaje" FontSize="18" PlaceholderColor="#990000" HeightRequest="90" />
+                </StackLayout>
+                <StackLayout Grid.Row="5">
+                    <Button Text="Enviar" HorizontalOptions="CenterAndExpand" WidthRequest="160" TextColor="White" 
+                      BorderColor="White" BorderWidth="2" CornerRadius="50"  
+                                            Clicked="Button_Clicked">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#990000" Offset="0"/>
+                                <GradientStop Color="#6777aa" Offset="94"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+
+                    </Button>
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

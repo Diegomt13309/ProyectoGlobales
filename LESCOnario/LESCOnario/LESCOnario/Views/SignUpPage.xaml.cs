@@ -27,7 +27,7 @@ namespace LESCOnario.Views
             user.Cedula = EntryUserCedula.Text;
             if (!string.IsNullOrWhiteSpace(user.UserName))
             {
-                if (await App.Database.SaveNoteAsync(user)==1)
+                if (await App.Database.SaveNoteAsync(user) == 1)
                 {
                     await this.DisplayAlert("Felicidades", "Usuario Registrado con Exito", "Continuar");
                     await Navigation.PushAsync(new WelcomePage());
@@ -38,5 +38,14 @@ namespace LESCOnario.Views
                 await this.DisplayAlert("Advertencia", "Complete todo el formulario", "OK");
             }
         }
+
+        private async void login_page(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
     }
+
+
+
 }

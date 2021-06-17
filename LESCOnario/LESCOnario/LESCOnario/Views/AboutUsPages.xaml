@@ -8,13 +8,13 @@
     
     >
 
-      <ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="Logout"
                  IconImageSource="logout.png"
                  Order="Secondary"
                  Priority="0"
                  Command="{Binding LogOutCommand}"/>
-        
+
         <ToolbarItem Text="About us"
                  IconImageSource="logout.png"
                  Order="Secondary"
@@ -34,10 +34,42 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition  Width="*" />
         </Grid.ColumnDefinitions>
-        <Button BackgroundColor="#750000" Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White"/>
-        <Button BackgroundColor="#4A0000" Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" />
-        <Button BackgroundColor="#290000" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" />
-        <Button Grid.Row="1" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#B81414"/>
+        <Button Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#990000" Offset="0"/>
+                    <GradientStop Color="#755579" Offset="41"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+        </Button>
+        <Button Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#755579" Offset="0"/>
+                    <GradientStop Color="#6777aa" Offset="94"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button BackgroundColor="#6777aa" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" >
+
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#990000" Offset="0"/>
+                    <GradientStop Color="#755579" Offset="94"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#d5cbe6">
+
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#755579" Offset="0"/>
+                    <GradientStop Color="#6777aa" Offset="94"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </ContentPage>
