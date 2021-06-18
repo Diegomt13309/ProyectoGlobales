@@ -60,22 +60,17 @@
                                            FontAttributes="Bold"
                                        HorizontalOptions="StartAndExpand"/>
                                     </StackLayout>
-
-
                                 </StackLayout>
                             </Grid>
-
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
             <Label Text="{Binding LblInfo}" Grid.Row="1" Grid.Column="0"
                    Margin="2"/>
             <Button x:Name="BtnAddCourse" Text="Agregar Nuevo Curso" Clicked="BtnAddCourse_Clicked"
                     Margin="2"
                     Grid.Row="2" Grid.Column="0" BackgroundColor="#ff6633" TextColor="#fff"/>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

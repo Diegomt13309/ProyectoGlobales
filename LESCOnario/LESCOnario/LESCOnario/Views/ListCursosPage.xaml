@@ -41,9 +41,23 @@
         </ScrollView>
         <Button Text="Salir" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="120" TextColor="White" 
                         BackgroundColor="Red" BorderColor="White" BorderWidth="2" CornerRadius="20" 
-                        Clicked="SalirClicked"/>
+                        Clicked="SalirClicked">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#990000" Offset="0"/>
+                    <GradientStop Color="#6777aa" Offset="94"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Button Text="Lista Profesores" VerticalOptions="End" HorizontalOptions="EndAndExpand" WidthRequest="170" TextColor="White" 
                         BackgroundColor="#387197" BorderColor="White" BorderWidth="2" CornerRadius="20" 
-                        Clicked="ListaClicked"/>
+                        Clicked="ListaClicked">
+            <Button.Background>
+                                    <LinearGradientBrush EndPoint="1,0">
+                                        <GradientStop Color="#990000" Offset="0"/>
+                                        <GradientStop Color="#6777aa" Offset="94"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+        </Button>
     </Grid>
 </ContentPage>

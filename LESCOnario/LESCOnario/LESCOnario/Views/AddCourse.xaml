@@ -37,11 +37,25 @@
 
                 <Button Text="{Binding BtnSaveLabel}" x:Name="BtnSave" HorizontalOptions="FillAndExpand"
                         BackgroundColor="#ff6633" TextColor="#fff"
-                        Margin="2" Grid.Column="0" Grid.Row="0" Command="{Binding btnSaveCourse}"/>
+                        Margin="2" Grid.Column="0" Grid.Row="0" Command="{Binding btnSaveCourse}">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#990000" Offset="0"/>
+                            <GradientStop Color="#6777aa" Offset="94"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
 
                 <Button Text="Limpiar" x:Name="BtnClear" HorizontalOptions="FillAndExpand"
                         BackgroundColor="#bfbfbf" TextColor="#fff"
-                        Margin="2" Grid.Column="1" Grid.Row="0" Command="{Binding btnClearCourse}"/>
+                        Margin="2" Grid.Column="1" Grid.Row="0" Command="{Binding btnClearCourse}">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#990000" Offset="0"/>
+                            <GradientStop Color="#6777aa" Offset="94"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
             </Grid>
 
 
