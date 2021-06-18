@@ -36,7 +36,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="{Binding BtnSaveLabel}" x:Name="BtnSave" HorizontalOptions="FillAndExpand"
-                        BackgroundColor="#ff6633" TextColor="#fff"
+                         TextColor="#fff"
                         Margin="2" Grid.Column="0" Grid.Row="0" Command="{Binding btnSaveCourse}">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="1,0">
