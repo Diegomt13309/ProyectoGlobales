@@ -34,7 +34,11 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition  Width="*" />
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White">
+        <StackLayout  Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image Source="logoUNA.png" HeightRequest="150" />
+        </StackLayout>
+
+        <Button Grid.Row="1" Grid.Column="0" Text="¿Qué es LESCOnario?" Clicked="whatis_button" TextColor="White">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0">
                     <GradientStop Color="#990000" Offset="0"/>
@@ -43,7 +47,7 @@
             </Button.Background>
 
         </Button>
-        <Button Grid.Row="0" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" >
+        <Button Grid.Row="1" Grid.Column="1" Text="Historia LESCO"  Clicked="history_button" TextColor="White" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0">
                     <GradientStop Color="#755579" Offset="0"/>
@@ -51,7 +55,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button BackgroundColor="#6777aa" Grid.Row="1" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" >
+        <Button Grid.Row="2" Grid.Column="0" Text="Ley 7600" Clicked="ley_button" TextColor="White" >
 
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0">
@@ -61,7 +65,7 @@
             </Button.Background>
 
         </Button>
-        <Button Grid.Row="1" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#d5cbe6">
+        <Button Grid.Row="2" Grid.Column="1" ImageSource="sena.png" IsEnabled="False" BackgroundColor="#d5cbe6">
 
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0">
